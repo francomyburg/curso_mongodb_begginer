@@ -24,4 +24,4 @@ use("platzi_store")
 
 // db.inventory.find({qty:{$lte:25}})
 
-db.inventory.find({qty:{lt:30,gte:25}})
+// db.inventory.find({qty:{$lt:30,$gte:25}})

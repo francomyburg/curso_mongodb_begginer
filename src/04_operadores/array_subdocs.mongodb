@@ -1,0 +1,32 @@
+use("sample_training")
+
+// db.companies.find(
+//     {"relationships.person.last_name":"Musk"
+// },{
+//     name:1
+// }
+// )
+
+// db.companies.find(
+//     {"relationships.0.person.last_name":"Musk"
+// },{
+//     name:1
+// }
+// )
+
+db.companies.find(
+    {"relationships.0.person.first_name":"Mark"
+},{
+    name:1,
+    relationships:1
+}
+).count()
+
+db.companies.find(
+    {"relationships.person.first_name":"Mark"
+},{
+    name:1,
+    relationships:1
+}
+).count()
+
